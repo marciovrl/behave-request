@@ -1,6 +1,6 @@
 #language:en
 
-@postPosts
+@postPosts @post
 Feature: Add item Post
 
     Background: Use endpoint posts
