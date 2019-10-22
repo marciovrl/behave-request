@@ -1,8 +1,7 @@
 from faker import Faker
 
 
-class FakePosts:
-
-    def __init__(self):
-        self.titlle = Faker().word(ext_word_list=None)
-        self.body = Faker().text(max_nb_chars=200, ext_word_list=None)
+class Data:
+    def create_post(self):
+        return {"titlle": Faker().word(ext_word_list=None),
+                "body": Faker().text(max_nb_chars=200, ext_word_list=None)}
