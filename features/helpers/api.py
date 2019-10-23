@@ -5,8 +5,8 @@ class API:
     def __init__(self, url):
         self.url = url
 
-    def get(self, headers={}):
-        response = requests.get(self.url, headers=headers)
+    def get(self, query="", headers={}):
+        response = requests.get(self.url + query, headers=headers)
         return response
 
     def post(self, body, headers={'Content-Type': 'application/json'}):
