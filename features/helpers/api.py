@@ -5,7 +5,7 @@ class API:
     def __init__(self, url):
         self.url = url
 
-    def get(self, query="", headers={}):
+    def get(self, query='', headers={}):
         response = requests.get(self.url + query, headers=headers)
         return response
 

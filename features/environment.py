@@ -1,6 +1,6 @@
 def before_all(context):
-    print("Starting Testing")
+    print('Starting Testing')
 
 
 def after_all(context):
-    print("Finish Testing")
+    print('Finish Testing')
