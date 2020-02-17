@@ -2,22 +2,23 @@ from features.helpers.api import API
 from features.helpers.data import Data
 
 
-@step(u'use endpoint "{endpoint}"')
+@step('use endpoint "{endpoint}"')
 def step_impl(context, endpoint):
-    context.api = API(context.config.userdata['url'] + endpoint)
+    url = context.config.userdata['url'] + endpoint
+    context.api = API(url)
 
 
-@step(u'I want to read the posts')
+@step('I want to read the posts')
 def step_impl(context):
     context.res = context.api.get()
 
 
-@step(u'I get the code "{code}"')
+@step('I get the code "{code}"')
 def step_impl(context, code):
     assert str(context.res.status_code) == code
 
 
-@step(u'add item Post')
+@step('add item Post')
 def step_impl(context):
     context.post = Data().create_post()
 

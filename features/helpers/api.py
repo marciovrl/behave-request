@@ -6,9 +6,18 @@ class API:
         self.url = url
 
     def get(self, query='', headers={}):
-        response = requests.get(self.url + query, headers=headers)
+        response = requests.get(
+            self.url + query,
+            headers=headers
+        )
+
         return response
 
     def post(self, body, headers={'Content-Type': 'application/json'}):
-        response = requests.post(self.url, headers=headers, json=body)
+        response = requests.post(
+            self.url,
+            headers=headers,
+            json=body
+        )
+
         return response
