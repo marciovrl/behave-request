@@ -7,22 +7,6 @@ For example, let's use a fake API [JSONPlaceholder](https://jsonplaceholder.typi
 
 - Python installed
 
-# Execute
+### `make help`
 
-- Install dependencies:
-
-```
-pip install -r requirements.txt
-```
-
-- Run all implemented tests:
-
-```
-behave
-```
-
-- Run all tests on a tag:
-
-```
-behave --tags=<TAG>
-```
+Displays all options for the project's make commands. <br>
