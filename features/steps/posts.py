@@ -1,5 +1,8 @@
 from features.helpers.api import API
-from features.helpers.data import Data
+from features.helpers.data import (
+    create_post,
+    create_token
+)
 
 
 @step('use endpoint "{endpoint}"')
@@ -20,6 +23,6 @@ def step_impl(context, code):
 
 @step('add item Post')
 def step_impl(context):
-    context.post = Data().create_post()
+    context.post = create_post()
 
     context.res = context.api.post(context.post)
